@@ -6,11 +6,16 @@ async function login(req, res) {
   const response_type = "code";
   scopes = scopes.join(" ");
 
-  let new_scopes = qs.stringify(scopes)
-
   res.redirect(
-    `https://id.twitch.tv/oauth2/authorize?response_type=${response_type}&client_id=${clientID}&redirect_uri=${redirect_uri}&scope=${new_scopes}`
+    "https://id.twitch.tv/oauth2/authorize?" +
+      qs.stringify({
+        response_type: response_type,
+        client_id: clientID,
+        scope: scopes,
+        redirect_uri: redirect_uri,
+      })
   );
 }
 
-module.exports = login;
+
+module.exports = login

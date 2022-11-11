@@ -1,0 +1,3 @@
+TWITCH_CLIENT_ID=gsndav8twvr4wmbgtm4vszsf9tma5c
+TWITCH_CLIENT_SECRET=p2sudij8j2iibvwfez23g32iutqqn0
+TWITCH_CALLBACK=http://localhost:8888/twitch/callback
